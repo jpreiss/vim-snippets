@@ -70,6 +70,13 @@ snippet eq* unnumbered equation environment
 	\\begin{equation*}
 		${0:${VISUAL}}
 	\\end{equation*}
+# Split equation
+snippet spl split equation environment
+	\\begin{equation}
+		\\begin{split}
+			${0:${VISUAL}}
+		\\end{split}
+	\\end{equation}
 # Unnumbered Equation
 snippet \ unnumbered equation: \[ ... \]
 	\\[
@@ -123,11 +130,6 @@ snippet cas cases environment
 		${1:equation}, &\\text{ if }${2:case}\\
 		${0:${VISUAL}}
 	\\end{cases}
-# Split
-snippet spl split environment
-	\\begin{split}
-		${0:${VISUAL}}
-	\\end{split}
 # Part
 snippet part document \part
 	\\part{${1:part name}} % (fold)%
@@ -300,9 +302,7 @@ snippet sum \sum^{}_{}
 snippet lim \lim_{}
 	\\lim_{${1:n \\to \\infty}} ${0}
 snippet frame frame environment
-	\\begin{frame}[${1:t}]
-		\frametitle{${2:title}}
-		\framesubtitle{${3:subtitle}}
+	\\begin{frame}{${1:t}}
 		${0:${VISUAL}}
 	\\end{frame}
 snippet block block environment
